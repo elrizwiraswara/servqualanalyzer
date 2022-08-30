@@ -7,9 +7,9 @@ Servqual merupakan salah satu metode untuk mengukur kualitas pelayanan pelayanan
 Full Demo:
 https://www.elrizwiraswara.com/apps/servqual/
 
-![Alt text](screenshoots/Screen Shot 2022-08-30 at 10.47.53.png?raw=true "Screenshoots")
+![alt text](screenshoots/Screen Shot 2022-08-30 at 10.47.53.png?raw=true "Screenshoots")
 
-![Alt text](screenshoots/Screen Shot 2022-08-30 at 10.48.43.png?raw=true "Screenshoots")
+![alt text](screenshoots/Screen Shot 2022-08-30 at 10.48.43.png?raw=true "Screenshoots")
 
 
 Builded using Flutter
