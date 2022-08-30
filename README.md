@@ -6,8 +6,13 @@ Servqual merupakan salah satu metode untuk mengukur kualitas pelayanan pelayanan
 
 
 **Full Demo:**
+
 https://www.elrizwiraswara.com/apps/servqual/
 
+**Data yang dibutuhkan:**
+- Jumlah data (n)
+- Data likert responden yang sudah divalidasi (reliabel)
+- Dimensi servqual tiap pernyataan
 
 ![Screenshot](https://github.com/elrizwiraswara/servqualanalyzer/blob/a630399d7f2a08d16589f86e7e9dd15689a5aed1/screenshoots/Screen%20Shot%202022-08-30%20at%2010.47.53.png)
 
