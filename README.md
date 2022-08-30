@@ -6,9 +6,9 @@ Full Demo:
 
 https://www.elrizwiraswara.com/apps/servqual/
 
-![alt text](.screenshoots/Screen Shot 2022-08-30 at 10.47.53.png?raw=true "Screenshoots")
+![Screenshot](screenshoots/Screen Shot 2022-08-30 at 10.47.53.png)
 
-![alt text](.screenshoots/Screen Shot 2022-08-30 at 10.48.43.png?raw=true "Screenshoots")
+![Screenshot](screenshoots/Screen Shot 2022-08-30 at 10.48.43.png)
 
 
 Builded using Flutter
