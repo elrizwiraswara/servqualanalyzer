@@ -10,10 +10,10 @@ Metode Servqual merupakan metode yang digunakan untuk mengukur kualitas layanan 
 
 Skala servqual meliputi lima dimensi kualitas jasa yaitu; Tangibles, Reliability, Responsiveness, Assurance, dan Empathy. Setiap dimensi memiliki beberapa pertanyaan dan dijawab dalam rentang nilai 1 sampai 5, di mana angka 1 mewakili perasaan sangat tidak setuju (strongly disagree) dan angka 5 mewakili perasaan sangat setuju (strongly agree). Berikut ini penjelasan mengenai ke-5 dimensi di atas, yaitu:
 
-- **Tangibles** (bukti terukur), menggambarkan fasilitas fisik, perlengkapan, dan tampilan dari personalia serta kehadiran para pengguna.
 - **Reliability** (keandalan), merujuk kepada kemampuan untuk memberikan pelayanan yang dijanjikan secara akurat dan handal.
 - **Responsiveness** (daya tanggap), yaitu kesediaan untuk membantu pelanggan serta memberikan perhatian yang tepat.
 - **Assurance** (jaminan), merupakan karyawan yang sopan dan berpengetahuan luas yang memberikan rasa percaya serta keyakinan.
+- **Tangibles** (keadaan fisik), menggambarkan fasilitas fisik, perlengkapan, dan tampilan dari personalia serta kehadiran para pengguna.
 - **Empathy** (empati), mencakup kepedulian serta perhatian individual kepada para pengguna.
 
 
