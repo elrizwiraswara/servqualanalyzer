@@ -1,17 +1,15 @@
 # servqual_analyzer
 
-A new Flutter project.
+# Service Quality Analyzer
+Servqual merupakan salah satu metode untuk mengukur kualitas pelayanan pelayanan dapat diukur dari lima dimensi, yaitu: Tangibles, Reliability, Responsiveness, Assurance dan Empathy
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Full Demo:
+https://www.elrizwiraswara.com/apps/servqual/
 
-A few resources to get you started if this is your first Flutter project:
+![Alt text](screenshoots/Screen Shot 2022-08-30 at 10.47.53.png?raw=true "Screenshoots")
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Alt text](screenshoots/Screen Shot 2022-08-30 at 10.48.43.png?raw=true "Screenshoots")
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# servqualanalyzer
+
+Builded using Flutter
