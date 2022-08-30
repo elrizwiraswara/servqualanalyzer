@@ -6,7 +6,6 @@ Servqual merupakan salah satu metode untuk mengukur kualitas pelayanan pelayanan
 
 
 **Full Demo:**
-
 https://www.elrizwiraswara.com/apps/servqual/
 
 
