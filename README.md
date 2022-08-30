@@ -8,7 +8,7 @@ https://www.elrizwiraswara.com/apps/servqual/
 
 ![Screenshot](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
 
-![Screenshot](screenshoots/Screen Shot 2022-08-30 at 10.48.43.png)
+![Screenshot](./screenshoots/Screen Shot 2022-08-30 at 10.48.43.png)
 
 
 Builded using Flutter
