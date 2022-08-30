@@ -1,7 +1,7 @@
 # Service Quality Analyzer
 Service Quality Analyzer adalah aplikasi yang dibuat untuk melakukan perhitungan dan analisa menggunakan metode servqual dengan cepat dan infografik
 
-**Dibuat menggunakan Flutter!**
+**Dibuat menggunakan Flutter! ❤️**
 
 ## Metode Servqual
 Metode Servqual merupakan metode yang digunakan untuk mengukur kualitas layanan dari atribut masing-masing dimensi, sehingga akan diperoleh nilai gap (kesenjangan) yang merupakam selisih antara persepsi konsumen terhadap layanan yang telah diterima dengan harapan terhadap yang akan diterima.
@@ -17,8 +17,8 @@ Skala servqual meliputi lima dimensi kualitas jasa yaitu; Tangibles, Reliability
 - **Empathy** (empati), mencakup kepedulian serta perhatian individual kepada para pengguna.
 
 
-## How to use
-
+## How To Use
+Visit:
 https://www.elrizwiraswara.com/apps/servqual/
 
 **Yang dibutuhkan:**
