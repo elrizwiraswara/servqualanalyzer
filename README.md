@@ -26,7 +26,7 @@ https://www.elrizwiraswara.com/apps/servqual/
 - Hasil kuesioner (likert) responden yang sudah divalidasi (valid & reliabel)
 - Dimensi servqual pada tiap pernyataan
 
-![Screenshot](https://github.com/elrizwiraswara/servqualanalyzer/blob/a630399d7f2a08d16589f86e7e9dd15689a5aed1/screenshoots/Screen%20Shot%202022-08-30%20at%2010.47.53.png)
+![Screenshot](https://github.com/elrizwiraswara/servqualanalyzer/blob/c79c92174db69f3fa296347f334cb9eaa7d5e566/screenshoots/Screen%20Shot%202022-08-30%20at%2010.47.53.png)
 
-![Screenshot](https://github.com/elrizwiraswara/servqualanalyzer/blob/a630399d7f2a08d16589f86e7e9dd15689a5aed1/screenshoots/Screen%20Shot%202022-08-30%20at%2010.48.43.png)
+![Screenshot](https://github.com/elrizwiraswara/servqualanalyzer/blob/c79c92174db69f3fa296347f334cb9eaa7d5e566/screenshoots/Screen%20Shot%202022-08-30%20at%2010.48.43.png)
 
