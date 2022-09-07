@@ -19,29 +19,50 @@ class _ResultState extends State<Result> {
   }
 
   Future<void> analyze() async {
+    // [∑] : Sigma/Penjumlahan
+    // [STS, TS, ...] : Likert scale
+    // [V] : Pernyataan
+    // [H] : Harapan
+    // [K] : Kenyataan
+    // [n] : Count/Jumlah data
+    // [d] : Dimension/dimensi
+    // [Avg] : Average/Rata-rata
+
+    // #0 Reset all variables
     sumAndAverageVariables.clear();
     chartGap5Varibles.clear();
     chartSumNValueServqual.clear();
     chartGap5Servqual.clear();
+    // #0 END
 
+    // #1 Menghitung Nilai dan Rata-Rata Harapan setiap responden
+    // Harapan
     for (StatementModel statement in statementsH) {
       int sum = 0;
+      // ∑Vi = (STSx1) + (TSx2) + (KSx3) + (Sx4) + (SSx5)
       for (int i = 0; i < statement.likerts.length; i++) {
         sum += int.parse(statement.likerts[i].text) * (i + 1);
       }
+      // Jumlah
       statement.sum = sum.toDouble();
+      // Rata-rata
       statement.average = sum / int.parse(dataCount.text);
     }
 
+    // Kenyataan
     for (StatementModel statement in statementsK) {
       int sum = 0;
+      // ∑Vi = (STSx1) + (TSx2) + (KSx3) + (Sx4) + (SSx5)
       for (int i = 0; i < statement.likerts.length; i++) {
         sum += int.parse(statement.likerts[i].text) * (i + 1);
       }
+      // Jumlah
       statement.sum = sum.toDouble();
+      // Rata-rata
       statement.average = sum / int.parse(dataCount.text);
     }
 
+    // Mengumpulkan hasil perhitungan untuk ditampilkan
     for (int i = 0; i < statementsH.length; i++) {
       sumAndAverageVariables.add(
         ChartSampleModel(
@@ -53,10 +74,14 @@ class _ResultState extends State<Result> {
         ),
       );
     }
+    // #1 END
 
+    // #2 Menghitung Nilai Gap 5 yang terjadi antara harapan dan kenyataan setiap responden
     for (int i = 0; i < statementsH.length; i++) {
+      // Kenyataan - Harapan
       double gapVi =
-          (statementsH[i].average ?? 0) - (statementsK[i].average ?? 0);
+          (statementsK[i].average ?? 0) - (statementsH[i].average ?? 0);
+      // Mengumpulkan hasil perhitungan untuk ditampilkan
       chartGap5Varibles.add(
         ChartSampleModel(
           x: 'V${i + 1}',
@@ -64,27 +89,36 @@ class _ResultState extends State<Result> {
         ),
       );
     }
+    // #2 END
 
+    // #3 Menghitung Nilai dan Rata-Rata Harapan dan Kenyataan berdasaran 5 dimensi servqual
     for (DimensionModel dimension in dimensions) {
       int nH = 0;
       int nK = 0;
       double sumH = 0;
       double sumK = 0;
 
+      // ∑VH = ∑AvgVHid
       for (int i = 0; i < statementsH.length; i++) {
         if (statementsH[i].dimension == dimension) {
           nH += 1;
           sumH += statementsH[i].average ?? 0;
         }
+      }
+      // ∑VK = ∑AvgVKid
+      for (int i = 0; i < statementsK.length; i++) {
         if (statementsK[i].dimension == dimension) {
           nK += 1;
           sumK += statementsK[i].average ?? 0;
         }
       }
 
+      // ∑Hd = ∑VK / nH
       double servqualValH = sumH / nH;
+      // ∑Kd = ∑VK / nK
       double servqualValK = sumK / nK;
 
+      // Mengumpulkan hasil perhitungan untuk ditampilkan
       chartSumNValueServqual.add(
         ChartSampleModel(
           x: dimension.text,
@@ -94,13 +128,17 @@ class _ResultState extends State<Result> {
           y3: servqualValK,
         ),
       );
+      // #3 END
 
+      // #4 Menghitung Nilai Gap 5 yang terjadi antara harapan dan kenyataan berdasaran 5 dimensi servqual
       chartGap5Servqual.add(
         ChartSampleModel(
           x: dimension.text,
+          // Nilai Gap 5 setiap dimensi
           y: servqualValK - servqualValH,
         ),
       );
+      // #4 END
     }
   }
 
@@ -166,7 +204,6 @@ class _ResultState extends State<Result> {
             majorTickLines: const MajorTickLines(width: 0),
             minorTickLines: const MinorTickLines(width: 0),
             minorGridLines: const MinorGridLines(width: 0),
-            // axisLine: const AxisLine(width: 0),
           ),
           primaryYAxis: NumericAxis(
             minimum: 0,
@@ -180,7 +217,6 @@ class _ResultState extends State<Result> {
             majorTickLines: const MajorTickLines(width: 0),
             minorTickLines: const MinorTickLines(width: 0),
             minorGridLines: const MinorGridLines(width: 0),
-            // axisLine: const AxisLine(width: 0),
           ),
           tooltipBehavior: TooltipBehavior(enable: true),
           legend: Legend(
@@ -191,28 +227,28 @@ class _ResultState extends State<Result> {
             ColumnSeries<ChartSampleModel, String>(
               dataSource: sumAndAverageVariables,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y2,
+              yValueMapper: (ChartSampleModel data, _) => data.y,
               name: 'Nilai Harapan',
               color: Colors.red.shade200,
             ),
             ColumnSeries<ChartSampleModel, String>(
               dataSource: sumAndAverageVariables,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y3,
+              yValueMapper: (ChartSampleModel data, _) => data.y1,
               name: 'Rata-Rata Harapan',
               color: Colors.red.shade100,
             ),
             ColumnSeries<ChartSampleModel, String>(
               dataSource: sumAndAverageVariables,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y,
+              yValueMapper: (ChartSampleModel data, _) => data.y2,
               name: 'Nilai Kenyataan',
               color: Colors.green.shade200,
             ),
             ColumnSeries<ChartSampleModel, String>(
               dataSource: sumAndAverageVariables,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y1,
+              yValueMapper: (ChartSampleModel data, _) => data.y3,
               name: 'Rata-Rata Kenyataan',
               color: Colors.green.shade100,
             ),
@@ -351,19 +387,19 @@ class _ResultState extends State<Result> {
                         textAlign: TextAlign.center,
                       ),
                       textColumn(
-                        '${statementsK[i].sum}',
-                        textAlign: TextAlign.center,
-                      ),
-                      textColumn(
-                        '${statementsK[i].average}',
-                        textAlign: TextAlign.center,
-                      ),
-                      textColumn(
                         '${statementsH[i].sum}',
                         textAlign: TextAlign.center,
                       ),
                       textColumn(
                         '${statementsH[i].average}',
+                        textAlign: TextAlign.center,
+                      ),
+                      textColumn(
+                        '${statementsK[i].sum}',
+                        textAlign: TextAlign.center,
+                      ),
+                      textColumn(
+                        '${statementsK[i].average}',
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -479,28 +515,28 @@ class _ResultState extends State<Result> {
             ColumnSeries<ChartSampleModel, String>(
               dataSource: chartSumNValueServqual,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y2,
+              yValueMapper: (ChartSampleModel data, _) => data.y,
               name: 'Jumlah Rata-Rata Harapan',
               color: Colors.red.shade200,
             ),
             ColumnSeries<ChartSampleModel, String>(
               dataSource: chartSumNValueServqual,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y3,
+              yValueMapper: (ChartSampleModel data, _) => data.y1,
               name: 'Nilai Harapan Pelayanan',
               color: Colors.red.shade100,
             ),
             ColumnSeries<ChartSampleModel, String>(
               dataSource: chartSumNValueServqual,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y,
+              yValueMapper: (ChartSampleModel data, _) => data.y2,
               name: 'Jumlah Rata-Rata Kenyataan',
               color: Colors.green.shade200,
             ),
             ColumnSeries<ChartSampleModel, String>(
               dataSource: chartSumNValueServqual,
               xValueMapper: (ChartSampleModel data, _) => data.x,
-              yValueMapper: (ChartSampleModel data, _) => data.y1,
+              yValueMapper: (ChartSampleModel data, _) => data.y3,
               name: 'Nilai Kenyataan Pelayanan',
               color: Colors.green.shade100,
             ),
@@ -594,19 +630,19 @@ class _ResultState extends State<Result> {
                       textAlign: TextAlign.center,
                     ),
                     textColumn(
-                      chartSumNValueServqual[i].y2?.toStringAsFixed(2) ?? '0',
-                      textAlign: TextAlign.center,
-                    ),
-                    textColumn(
                       chartSumNValueServqual[i].y?.toStringAsFixed(2) ?? '0',
                       textAlign: TextAlign.center,
                     ),
                     textColumn(
-                      chartSumNValueServqual[i].y3?.toStringAsFixed(2) ?? '0',
+                      chartSumNValueServqual[i].y2?.toStringAsFixed(2) ?? '0',
                       textAlign: TextAlign.center,
                     ),
                     textColumn(
                       chartSumNValueServqual[i].y1?.toStringAsFixed(2) ?? '0',
+                      textAlign: TextAlign.center,
+                    ),
+                    textColumn(
+                      chartSumNValueServqual[i].y3?.toStringAsFixed(2) ?? '0',
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -646,14 +682,14 @@ class _ResultState extends State<Result> {
             minimum: -(chartGap5Servqual.isNotEmpty
                 ? chartGap5Servqual
                     .reduce((value, element) =>
-                        (value.y ?? 0) > (element.y ?? 0) ? value : element)
+                        value.y! > element.y! ? element : value)
                     .y!
                     .toDouble()
                 : 4.0),
             maximum: chartGap5Servqual.isNotEmpty
                 ? chartGap5Servqual
                     .reduce((value, element) =>
-                        (value.y ?? 0) > (element.y ?? 0) ? value : element)
+                        value.y! > element.y! ? element : value)
                     .y!
                     .toDouble()
                 : 4.0,

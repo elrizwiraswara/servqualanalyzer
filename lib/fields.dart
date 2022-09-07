@@ -251,8 +251,8 @@ class _FieldsState extends State<Fields> {
               ),
             ),
             ...List.generate(
-              statementsH.length,
-              (i) => fieldContainer(i, FieldTypes.harapan),
+              statementsK.length,
+              (i) => fieldContainer(i, FieldTypes.kenyataan),
             ),
           ],
         ),
@@ -291,8 +291,8 @@ class _FieldsState extends State<Fields> {
               ),
             ),
             ...List.generate(
-              statementsK.length,
-              (i) => fieldContainer(i, FieldTypes.kenyataan),
+              statementsH.length,
+              (i) => fieldContainer(i, FieldTypes.harapan),
             ),
           ],
         ),
@@ -362,7 +362,7 @@ class _FieldsState extends State<Fields> {
                   ? Padding(
                       padding: const EdgeInsets.only(bottom: 8.0, left: 2),
                       child: Text(
-                        type == FieldTypes.kenyataan ? 'Hx' : 'Kx',
+                        type == FieldTypes.harapan ? 'Hx' : 'Kx',
                         style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
@@ -376,13 +376,13 @@ class _FieldsState extends State<Fields> {
                 constraints: const BoxConstraints(minWidth: 50),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: type == FieldTypes.kenyataan
+                  color: type == FieldTypes.harapan
                       ? Colors.red.shade200
                       : Colors.green.shade200,
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(
-                  type == FieldTypes.kenyataan ? 'H${i + 1}' : 'K${i + 1}',
+                  type == FieldTypes.harapan ? 'H${i + 1}' : 'K${i + 1}',
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
@@ -407,7 +407,6 @@ class _FieldsState extends State<Fields> {
                     )
                   : const SizedBox.shrink(),
               Container(
-                // margin: const EdgeInsets.all(6),
                 padding: const EdgeInsets.fromLTRB(10, 6, 4, 6),
                 decoration: BoxDecoration(
                   color: Colors.black.withOpacity(0.10),
@@ -464,14 +463,9 @@ class _FieldsState extends State<Fields> {
                       : const SizedBox.shrink(),
                   Container(
                     margin: const EdgeInsets.fromLTRB(6, 0, 0, 0),
-                    // padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(4),
-                      // border: Border.all(
-                      //   width: 1,
-                      //   color: Colors.black12,
-                      // ),
                     ),
                     child: TextField(
                       controller: type == FieldTypes.kenyataan
