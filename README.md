@@ -1,5 +1,5 @@
 # Service Quality Analyzer
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](./licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 
 Service Quality Analyzer adalah aplikasi yang dibuat untuk melakukan perhitungan dan analisa menggunakan metode servqual dengan cepat dan infografik
 
