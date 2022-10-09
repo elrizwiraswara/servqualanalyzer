@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-orange)](./LICENSE)
 [![Made with Flutter](https://img.shields.io/badge/made%20with-Flutter-blue)](https://flutter.dev/)
 
-Service Quality Analyzer is an application created to do calculations and analysis using the SERVQUAL method quickly and infographic
+Service Quality Analyzer is an application created to do calculations and analysis using the SERVQUAL method quickly
 
 **Made with Flutter! ❤️**
 
@@ -13,10 +13,10 @@ The servqual method is a method used to measure the service quality of the attri
 
 Servqual scale includes five dimensions of service quality, namely; Tangibles, Reliability, Responsiveness, Assurance, and Empathy. Each dimension has several questions and is answered in a range of values of 1 to 5, where number 1 represents feelings of strong disagreement (strongly disagree) and number 5 represents feelings of strong agreement (strongly agree). The following is an explanation of the 5 dimensions above:
 
-- **Reliability**, Refer to the ability to provide services that are promised accurately and reliably.
-- **Responsiveness**, namely willingness to help customers and give right attention.
+- **Reliability**, refer to the ability to provide services that are promised accurately and reliably.
+- **Responsiveness**, describe willingness to help customers and give right attention.
 - **Assurance**, is a polite and knowledgeable employee who gives trust and confidence.
-- **Tangibles**, Describe physical facilities, equipment, and appearance of personnel and the presence of users.
+- **Tangibles**, describe physical facilities, equipment, and appearance of personnel and the presence of users.
 - **Empathy**, includes concern and individual attention to users.
 
 ## How To Use
