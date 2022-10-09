@@ -1,5 +1,6 @@
 # Service Quality Analyzer
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-orange)](./LICENSE)
+[![Made with Flutter](https://img.shields.io/badge/made%20with-Flutter-blue)](https://flutter.dev/)
 
 Service Quality Analyzer adalah aplikasi yang dibuat untuk melakukan perhitungan dan analisa menggunakan metode servqual dengan cepat dan infografik
 
