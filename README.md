@@ -2,32 +2,31 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-orange)](./LICENSE)
 [![Made with Flutter](https://img.shields.io/badge/made%20with-Flutter-blue)](https://flutter.dev/)
 
-Service Quality Analyzer adalah aplikasi yang dibuat untuk melakukan perhitungan dan analisa menggunakan metode servqual dengan cepat dan infografik
+Service Quality Analyzer is an application created to do calculations and analysis using the SERVQUAL method quickly and infographic
 
-**Dibuat menggunakan Flutter! ❤️**
+**Made with Flutter! ❤️**
 
-## Metode Servqual
-Metode Servqual merupakan metode yang digunakan untuk mengukur kualitas layanan dari atribut masing-masing dimensi, sehingga akan diperoleh nilai gap (kesenjangan) yang merupakam selisih antara persepsi konsumen terhadap layanan yang telah diterima dengan harapan terhadap yang akan diterima.
+## SERVQUAL Method
+The servqual method is a method used to measure the service quality of the attributes of each dimension, so that the gap value will be the difference between the consumer perception of the services that have been received with the hope of what will be received.
 
-**Dimensi Servqual**
+**SERVQUAL Dimensions**
 
-Skala servqual meliputi lima dimensi kualitas jasa yaitu; Tangibles, Reliability, Responsiveness, Assurance, dan Empathy. Setiap dimensi memiliki beberapa pertanyaan dan dijawab dalam rentang nilai 1 sampai 5, di mana angka 1 mewakili perasaan sangat tidak setuju (strongly disagree) dan angka 5 mewakili perasaan sangat setuju (strongly agree). Berikut ini penjelasan mengenai ke-5 dimensi di atas, yaitu:
+Servqual scale includes five dimensions of service quality, namely; Tangibles, Reliability, Responsiveness, Assurance, and Empathy. Each dimension has several questions and is answered in a range of values of 1 to 5, where number 1 represents feelings of strong disagreement (strongly disagree) and number 5 represents feelings of strong agreement (strongly agree). The following is an explanation of the 5 dimensions above:
 
-- **Reliability** (keandalan), merujuk kepada kemampuan untuk memberikan pelayanan yang dijanjikan secara akurat dan handal.
-- **Responsiveness** (daya tanggap), yaitu kesediaan untuk membantu pelanggan serta memberikan perhatian yang tepat.
-- **Assurance** (jaminan), merupakan karyawan yang sopan dan berpengetahuan luas yang memberikan rasa percaya serta keyakinan.
-- **Tangibles** (keadaan fisik), menggambarkan fasilitas fisik, perlengkapan, dan tampilan dari personalia serta kehadiran para pengguna.
-- **Empathy** (empati), mencakup kepedulian serta perhatian individual kepada para pengguna.
-
+- **Reliability**, Refer to the ability to provide services that are promised accurately and reliably.
+- **Responsiveness**, namely willingness to help customers and give right attention.
+- **Assurance**, is a polite and knowledgeable employee who gives trust and confidence.
+- **Tangibles**, Describe physical facilities, equipment, and appearance of personnel and the presence of users.
+- **Empathy**, includes concern and individual attention to users.
 
 ## How To Use
 Visit:
 https://www.elrizwiraswara.com/apps/servqual/
 
-**Yang dibutuhkan:**
-- Jumlah data (n)
-- Hasil kuesioner (likert) responden yang sudah divalidasi (valid & reliabel)
-- Dimensi servqual pada tiap pernyataan
+**What is needed:**
+- Amount of data (n)
+- Questionnaire results (Likert) respondents who have been validated (valid and reliable)
+- SERVQUAL Dimensions on each statement
 
 ![Screenshot](https://github.com/elrizwiraswara/servqualanalyzer/blob/c79c92174db69f3fa296347f334cb9eaa7d5e566/screenshoots/Screen%20Shot%202022-08-30%20at%2010.47.53.png)
 
