@@ -21,7 +21,7 @@ Servqual scale includes five dimensions of service quality, namely; Tangibles, R
 
 ## How To Use
 Visit:
-https://www.elrizwiraswara.com/apps/servqual/
+https://elriztechnology.com/apps/servqual/
 
 **What is needed:**
 - Amount of data (n)
