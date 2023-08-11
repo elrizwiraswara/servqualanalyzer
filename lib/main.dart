@@ -49,12 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           child: Container(
             padding: const EdgeInsets.all(22),
-            width: MediaQuery.of(context).size.width > 800
-                ? 800
-                : MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height > 400
-                ? 400
-                : MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width > 800 ? 800 : MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height > 400 ? 400 : MediaQuery.of(context).size.height,
             child: Stack(
               alignment: Alignment.center,
               children: [

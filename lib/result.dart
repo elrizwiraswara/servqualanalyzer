@@ -79,8 +79,7 @@ class _ResultState extends State<Result> {
     // #2 Menghitung Nilai Gap 5 yang terjadi antara harapan dan kenyataan setiap responden
     for (int i = 0; i < statementsH.length; i++) {
       // Kenyataan - Harapan
-      double gapVi =
-          (statementsK[i].average ?? 0) - (statementsH[i].average ?? 0);
+      double gapVi = (statementsK[i].average ?? 0) - (statementsH[i].average ?? 0);
       // Mengumpulkan hasil perhitungan untuk ditampilkan
       chartGap5Varibles.add(
         ChartSampleModel(
@@ -158,9 +157,7 @@ class _ResultState extends State<Result> {
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: SizedBox(
-          width: MediaQuery.of(context).size.width < 1000
-              ? 1000
-              : MediaQuery.of(context).size.width,
+          width: MediaQuery.of(context).size.width < 1000 ? 1000 : MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -208,8 +205,7 @@ class _ResultState extends State<Result> {
           primaryYAxis: NumericAxis(
             minimum: 0,
             maximum: sumAndAverageVariables
-                .reduce(
-                    (value, element) => value.y! > element.y! ? value : element)
+                .reduce((value, element) => value.y! > element.y! ? value : element)
                 .y!
                 .toDouble(),
             plotOffset: 6,
@@ -283,18 +279,10 @@ class _ResultState extends State<Result> {
           ),
           primaryYAxis: NumericAxis(
             minimum: -(chartGap5Varibles.isNotEmpty
-                ? chartGap5Varibles
-                    .reduce((value, element) =>
-                        value.y! > element.y! ? element : value)
-                    .y!
-                    .toDouble()
+                ? chartGap5Varibles.reduce((value, element) => value.y! > element.y! ? element : value).y!.toDouble()
                 : 4.0),
             maximum: chartGap5Varibles.isNotEmpty
-                ? chartGap5Varibles
-                    .reduce((value, element) =>
-                        value.y! > element.y! ? element : value)
-                    .y!
-                    .toDouble()
+                ? chartGap5Varibles.reduce((value, element) => value.y! > element.y! ? element : value).y!.toDouble()
                 : 4.0,
             plotOffset: 6,
             majorGridLines: const MajorGridLines(width: 0),
@@ -495,8 +483,7 @@ class _ResultState extends State<Result> {
           primaryYAxis: NumericAxis(
             minimum: 0,
             maximum: chartSumNValueServqual
-                .reduce(
-                    (value, element) => value.y! > element.y! ? value : element)
+                .reduce((value, element) => value.y! > element.y! ? value : element)
                 .y!
                 .toDouble(),
             plotOffset: 6,
@@ -622,11 +609,7 @@ class _ResultState extends State<Result> {
                       textAlign: TextAlign.center,
                     ),
                     textColumn(
-                      statementsH
-                          .where(
-                              (element) => element.dimension == dimensions[i])
-                          .map((e) => e.i)
-                          .toString(),
+                      statementsH.where((element) => element.dimension == dimensions[i]).map((e) => e.i).toString(),
                       textAlign: TextAlign.center,
                     ),
                     textColumn(
@@ -680,18 +663,10 @@ class _ResultState extends State<Result> {
           ),
           primaryYAxis: NumericAxis(
             minimum: -(chartGap5Servqual.isNotEmpty
-                ? chartGap5Servqual
-                    .reduce((value, element) =>
-                        value.y! > element.y! ? element : value)
-                    .y!
-                    .toDouble()
+                ? chartGap5Servqual.reduce((value, element) => value.y! > element.y! ? element : value).y!.toDouble()
                 : 4.0),
             maximum: chartGap5Servqual.isNotEmpty
-                ? chartGap5Servqual
-                    .reduce((value, element) =>
-                        value.y! > element.y! ? element : value)
-                    .y!
-                    .toDouble()
+                ? chartGap5Servqual.reduce((value, element) => value.y! > element.y! ? element : value).y!.toDouble()
                 : 4.0,
             plotOffset: 6,
             majorGridLines: const MajorGridLines(width: 0),

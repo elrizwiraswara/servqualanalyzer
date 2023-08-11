@@ -95,8 +95,7 @@ List<StatementModel> statementsH = [
     rawDataH.length,
     (i) => StatementModel(
       i: i + 1,
-      dimension: dimensions[rawStatementDim.indexOf(
-          rawStatementDim.where((element) => element.contains(i + 1)).first)],
+      dimension: dimensions[rawStatementDim.indexOf(rawStatementDim.where((element) => element.contains(i + 1)).first)],
       likerts: [
         ...List.generate(
           rawDataH[i].length,
@@ -112,8 +111,7 @@ List<StatementModel> statementsK = [
     rawDataK.length,
     (i) => StatementModel(
       i: i + 1,
-      dimension: dimensions[rawStatementDim.indexOf(
-          rawStatementDim.where((element) => element.contains(i + 1)).first)],
+      dimension: dimensions[rawStatementDim.indexOf(rawStatementDim.where((element) => element.contains(i + 1)).first)],
       likerts: [
         ...List.generate(
           rawDataK[i].length,

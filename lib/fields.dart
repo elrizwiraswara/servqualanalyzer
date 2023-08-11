@@ -29,9 +29,7 @@ class _FieldsState extends State<Fields> {
       body: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: SizedBox(
-          width: MediaQuery.of(context).size.width < 1000
-              ? 1000
-              : MediaQuery.of(context).size.width,
+          width: MediaQuery.of(context).size.width < 1000 ? 1000 : MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -376,9 +374,7 @@ class _FieldsState extends State<Fields> {
                 constraints: const BoxConstraints(minWidth: 50),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: type == FieldTypes.harapan
-                      ? Colors.red.shade200
-                      : Colors.green.shade200,
+                  color: type == FieldTypes.harapan ? Colors.red.shade200 : Colors.green.shade200,
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: Text(
@@ -413,9 +409,7 @@ class _FieldsState extends State<Fields> {
                   borderRadius: BorderRadius.circular(4),
                 ),
                 child: DropdownButton<DimensionModel>(
-                  value: type == FieldTypes.kenyataan
-                      ? statementsH[i].dimension
-                      : statementsK[i].dimension,
+                  value: type == FieldTypes.kenyataan ? statementsH[i].dimension : statementsK[i].dimension,
                   isDense: true,
                   underline: Container(),
                   items: dimensions.map((DimensionModel value) {
@@ -468,9 +462,7 @@ class _FieldsState extends State<Fields> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: TextField(
-                      controller: type == FieldTypes.kenyataan
-                          ? statementsH[i].likerts[n]
-                          : statementsK[i].likerts[n],
+                      controller: type == FieldTypes.kenyataan ? statementsH[i].likerts[n] : statementsK[i].likerts[n],
                       keyboardType: TextInputType.number,
                       style: const TextStyle(
                         fontSize: 14,
